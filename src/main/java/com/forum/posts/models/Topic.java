@@ -1,17 +1,14 @@
 package com.forum.posts.models;
 
+import com.forum.posts.models.dtos.RegisterTopic;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
 @Entity(name = "Topic")
 @Table(name = "topics")
 @Getter
-@NoArgsConstructor
-@AllArgsConstructor
 public class Topic {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,7 +16,22 @@ public class Topic {
 	private String title;
 	private String description;
 	private Date creationDate;
+	@Enumerated(EnumType.STRING)
 	private Status status;
 	private String author;
 	private String course;
+
+	public Topic(RegisterTopic data, Date date) {
+		this.title = data.title();
+		this.description = data.description();
+		this.status = data.status();
+		this.author = data.author();
+		this.course = data.course();
+		this.creationDate = date;
+	}
+
+
+	public Topic() {
+
+	}
 }
