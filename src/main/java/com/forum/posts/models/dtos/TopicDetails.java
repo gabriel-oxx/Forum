@@ -4,6 +4,8 @@ import com.forum.posts.models.Status;
 import com.forum.posts.models.Topic;
 import jakarta.validation.constraints.NotBlank;
 
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.util.Date;
 
 public record TopicDetails(
@@ -11,7 +13,7 @@ public record TopicDetails(
 		String title,
 		String description,
 		Status status,
-		Date creationDate,
+		ZonedDateTime creationDate,
 		String author,
 		String course
 ) {
@@ -21,7 +23,7 @@ this(
 		topic.getTitle(),
 		topic.getDescription(),
 		topic.getStatus(),
-		topic.getCreationDate(),
+		topic.getCreationDate().toInstant().atZone(ZoneId.systemDefault()),
 		topic.getAuthor(),
 		topic.getCourse()
 );
