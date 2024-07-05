@@ -1,6 +1,6 @@
 package com.forum.posts.models;
 
-import com.forum.posts.models.dtos.RegisterTopic;
+import com.forum.posts.models.dtos.RegisterTopicInput;
 import jakarta.persistence.*;
 import lombok.Getter;
 
@@ -21,7 +21,7 @@ public class Topic {
 	private String author;
 	private String course;
 
-	public Topic(RegisterTopic data, Date date) {
+	public Topic(RegisterTopicInput data, Date date) {
 		this.title = data.title();
 		this.description = data.description();
 		this.status = data.status();
