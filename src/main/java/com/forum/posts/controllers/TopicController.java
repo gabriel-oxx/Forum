@@ -44,4 +44,13 @@ public class TopicController {
 				           .map(RegisterTopicOutput::new);
 		return ResponseEntity.ok(page);
 	}
+
+	@GetMapping("/{id}")
+public ResponseEntity getTopic(@PathVariable(required = true) Long id){
+
+		var topic = topicRepository.getReferenceById(id);
+
+		return ResponseEntity.ok(new TopicDetails(topic));
+	}
+
 }
