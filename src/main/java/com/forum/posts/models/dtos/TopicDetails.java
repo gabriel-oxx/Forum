@@ -23,7 +23,7 @@ this(
 		topic.getTitle(),
 		topic.getDescription(),
 		topic.getStatus(),
-		topic.getCreationDate().toInstant().atZone(ZoneId.systemDefault()),
+		topic.getCreationDate(),
 		topic.getAuthor(),
 		topic.getCourse()
 );
