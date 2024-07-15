@@ -1,6 +1,6 @@
 CREATE TABLE topics
 (
-    id            BIGSERIAL PRIMARY KEY,
+    id            BIGINT AUTO_INCREMENT PRIMARY KEY,
     title         VARCHAR(100) NOT NULL,
     description   VARCHAR(100) NOT NULL,
     status        VARCHAR(10)  NOT NULL,
