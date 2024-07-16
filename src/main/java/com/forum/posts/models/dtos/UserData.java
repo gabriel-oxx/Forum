@@ -1,4 +1,4 @@
 package com.forum.posts.models.dtos;
 
-public record UserData(Long id, String userName, String password) {
+public record UserData(String username, String password) {
 }
