@@ -38,14 +38,15 @@ Este projeto foi desenvolvido para um desafio da Alura, como terceiro desafio da
 + Resposta: Detalhes do tópico.
 - POST /topicos
 + Descrição: Cria um novo tópico.
-+ Corpo da requisição: ```
-{
-   "title": "string",
-   "description": "string",
-   "status": "string",
-   "author": "string",
-   "course": "string"
-   }
++ Corpo da requisição:
+   ```
+    {
+     "title": "string",
+       "description": "string",
+     "status": "string",
+     "author": "string",
+     "course": "string"
+    }
    ```
 + Resposta: Detalhes do tópico criado.
 - PUT /topicos/{id}
@@ -53,14 +54,16 @@ Este projeto foi desenvolvido para um desafio da Alura, como terceiro desafio da
 + Corpo da requisição:
 ```
 {
-   "title": "string", "description": "string", "status": "string"
+"title": "string",
+"description": "string",
+"status": "string"
    }
    ```
 + Parâmetro: id (ID do tópico)
 + Resposta: Detalhes do tópico atualizado.
 - DELETE /topicos/{id}
 + Descrição: Deleta um tópico existente pelo ID.
-+ Parâmetro: id (ID do tópico)
++ Parâmetro: id (ID do tópico).
 ##Como Executar o Projeto Localmente
 1. Pré-requisitos: Certifique-se de ter o JDK instalado na sua máquina e um ambiente de desenvolvimento adequado (por exemplo, IntelliJ IDEA ou Eclipse).
 2. Clonar o Repositório
@@ -74,6 +77,8 @@ Este projeto foi desenvolvido para um desafio da Alura, como terceiro desafio da
 Copie o arquivo .env.example para .env e ajuste as variáveis de acordo com o seu ambiente local.
 4. Compilar.
 5. Iniciar o Servidor
-   ./mvnw spring-boot:run
+   ```
+    ./mvnw spring-boot:run
+    ```
 ## Licença
 Este projeto é licenciado sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.      
